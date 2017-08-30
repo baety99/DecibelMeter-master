@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calibrate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.voice.decibelmeter.CalibrateActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calibrateLinearLayout"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+              android:text="-1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/bigMinusButton"
+              android:layout_weight="1"
+            android:layout_below="@+id/smallMinusButton"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="-0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/smallMinusButton"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:layout_below="@+id/calibrateDbText"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="None"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/calibrateDbText"
+            android:layout_weight="5"
+            android:minWidth="80dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_below="@+id/smallPlusButton"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:text="+0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/smallPlusButton"
+            android:layout_weight="1"
+            android:layout_below="@+id/bigPlusButton"
+            android:layout_alignStart="@+id/bigPlusButton" />
+
+        <Button
+            android:text="+1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bigPlusButton"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <ToggleButton
+        android:text="Start Calibration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/calibrateLinearLayout"
+        android:id="@+id/calibrateButton"
+        android:textOff="Touch to Start Calibration"
+        android:textOn="Stop Calibrating..." />
+
+</RelativeLayout>
